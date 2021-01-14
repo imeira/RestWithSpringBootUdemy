@@ -20,7 +20,7 @@ public class Startup {
 		SpringApplication.run(Startup.class, args);
 		
 		/*BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(16);
-		String result = bCryptPasswordEncoder.encode("admin123");
+		String result = bCryptPasswordEncoder.encode("aminadabe123");
 		System.out.println("My hash " + result);*/
 	}
 }

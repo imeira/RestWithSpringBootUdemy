@@ -122,7 +122,7 @@
 				<configuration>
 					<url>jdbc:sqlserver://localhost;databaseName=rest_with_spring_boot_udemy</url>
 					<user>sa</user>
-					<password>admin123!</password>
+					<password>aminadabe123!</password>
 				</configuration>
 				<dependencies>
 					<dependency>

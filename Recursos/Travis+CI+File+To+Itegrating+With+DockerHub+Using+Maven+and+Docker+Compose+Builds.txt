@@ -1,0 +1,24 @@
+language: java
+jdk:
+  - oraclejdk11
+services: docker
+before_install:
+  - sudo apt-get update
+  - cd 19\ RestWithSpringBootUdemy\ CI\ na\ AWS\ com\ o\ Travis\ CI/RestWithSpringBootUdemy/
+  - echo "Let's start Maven Package!"
+  - mvn clean package
+  - cd ..
+  - echo "We are in the Docker folder!!!"
+script:
+  - echo "OK Here we GO!"
+  - docker-compose build
+before_deploy:
+  - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
+deploy:
+  provider: script
+  script:
+    docker push leandrocgsi/rest-with-spring-boot-udemy;
+  on:
+    branch: master
+notifications:
+  email: false
